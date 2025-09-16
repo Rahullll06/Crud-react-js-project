@@ -15,7 +15,7 @@ const Create = () => {
   const submitdata = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://localhost:3000/Student", value);
+      const res = await axios.post("http://localhost:3000/Student", value);
       console.log(res.data);
       navigate('/');
     } catch (error) {
