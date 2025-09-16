@@ -13,7 +13,7 @@ const Read = () => {
   } ,[])
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/Student/${id}`);
+        const res = await axios.get(`https://localhost:3000/Student/${id}`);
         console.log(res.data);
         setgetdata(res.data);
       } catch (error) {
