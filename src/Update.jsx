@@ -13,7 +13,7 @@ const Update = () => {
   const nevigate= useNavigate();
   async function fetchStudentData() {
     try {
-      const res = await axios.get(`http://localhost:3000/Student/${id}`);
+      const res = await axios.get(`https://localhost:3000/Student/${id}`);
       setupdatedata(res.data);
        
     } catch (error) {
@@ -28,7 +28,7 @@ const Update = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/Student/${id}`, updatedata);
+      await axios.put(`https://localhost:3000/Student/${id}`, updatedata);
       alert('Student data updated successfully!');
      nevigate('/');
     } catch (error) {
