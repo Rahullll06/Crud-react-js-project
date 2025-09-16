@@ -24,8 +24,11 @@ const Create = () => {
   };
 
   const handledata = (e) => {
-    setValue({ ...value, name: e.target.value });
-  };
+    
+  setValue({ ...value, [e.target.name]: e.target.value });
+};
+
+
 
   return (
     <div className="bg-black min-h-screen p-4">
