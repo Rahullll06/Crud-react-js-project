@@ -28,7 +28,7 @@ const Home = () => {
     const confirm= window.confirm("would you like to delete")
     if( confirm){
        axios
-      .delete("http://localhost:3000/Student/" + id)
+      .delete("https://localhost:3000/Student/" + id)
       .then((res) => {
         console.log("Deleted:", res.data);
        
