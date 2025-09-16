@@ -13,7 +13,7 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("https://localhost:3000/Student");
+      const res = await axios.get("http://localhost:3000/Student");
       setData(res.data);
     } catch (error) {
       console.log(error);
@@ -28,7 +28,7 @@ const Home = () => {
     const confirm= window.confirm("would you like to delete")
     if( confirm){
        axios
-      .delete("https://localhost:3000/Student/" + id)
+      .delete("http://localhost:3000/Student/" + id)
       .then((res) => {
         console.log("Deleted:", res.data);
        
